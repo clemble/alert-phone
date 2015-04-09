@@ -26,6 +26,8 @@ public class SystemPhoneSMSRequestEventListener implements SystemEventListener<S
     public void onEvent(SystemPhoneSMSSendRequestEvent event) {
         // Step 1. Fetching phone
         ServerPlayerPhone phone = phoneRepository.findOne(event.getPlayer());
+        if (phone == null)
+            return;
         // Step 2. Generating text
         String text = templateService.produce(event.getTemplate(), event.getParams());
         // Step 3. Sending SMS
