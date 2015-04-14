@@ -26,7 +26,7 @@ services:
 
 after_success:
     - mvn deploy
-    - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-    - docker info
-    - docker build -t clemble/phone .
-    - docker push clemble/phone
+    - sudo docker info
+    - sudo docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+    - sudo docker build -t clemble/phone .
+    - sudo docker push clemble/phone
