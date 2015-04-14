@@ -16,6 +16,9 @@ env:
     # DOCKER PASSWORD
     - secure: KAj1U/8M81fN8rqbZku763n8lEdWLUvYEXOPCf5EOkriWb2vd3rhlatgemqFuOYsae5ialwomG5SEl9vVlCVkj8Ck4kwC/zeg5/Q/EcssFiUw/H0LbhWEVaCl6pUGgFGih8Mc7bP1R5usuUrEQtJ0RnCXYm1ft3/h7TXQiRbtdhIJH7wmwQoc+CHptNNuVIksoPr2LgnnWXFzj6dbn/8Z032L6iDgVDEmzqIL5qqbkU8G03Fjm2SNcjcQ7PAXN+hkzN2SkQfAxBQZcm1RnyoLbo5v+LKxZEtIUpHqbq89dwZR+t3lskc5GSc/V3xK7ugITaeKXLnGZNXZB9G+b4T4w==
 
+before_install:
+    - wget -qO- https://get.docker.com/ | sh
+
 services:
     - mongodb
     - rabbitmq
