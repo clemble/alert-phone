@@ -1,6 +1,6 @@
 package com.clemble.casino.server.phone.spring;
 
-import com.clemble.casino.server.phone.controller.PlayerPhoneServiceController;
+import com.clemble.casino.server.phone.controller.PlayerPhoneController;
 import com.clemble.casino.server.phone.listener.SystemPhoneSMSRequestEventListener;
 import com.clemble.casino.server.phone.repository.PendingPlayerPhoneRepository;
 import com.clemble.casino.server.phone.repository.PlayerPhoneRepository;
@@ -40,8 +40,8 @@ public class PlayerPhoneSpringConfiguration implements SpringConfiguration {
     }
 
     @Bean
-    public PlayerPhoneServiceController playerPhoneServiceController(ServerPlayerPhoneService serverPlayerPhoneService) {
-        return new PlayerPhoneServiceController(serverPlayerPhoneService);
+    public PlayerPhoneController playerPhoneServiceController(ServerPlayerPhoneService serverPlayerPhoneService) {
+        return new PlayerPhoneController(serverPlayerPhoneService);
     }
 
     @Bean

@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.*;
  * Created by mavarazy on 12/8/14.
  */
 @RestController
-public class PlayerPhoneServiceController implements PlayerPhoneService {
+public class PlayerPhoneController implements PlayerPhoneService {
 
     final ServerPlayerPhoneService playerPhoneService;
 
-    public PlayerPhoneServiceController(ServerPlayerPhoneService playerPhoneService) {
+    public PlayerPhoneController(ServerPlayerPhoneService playerPhoneService) {
         this.playerPhoneService = playerPhoneService;
     }
 
