@@ -4,7 +4,7 @@ import com.clemble.casino.player.PlayerPhone;
 import com.clemble.casino.player.PlayerPhoneVerification;
 import com.clemble.casino.player.PlayerPhoneWebMapping;
 import com.clemble.casino.player.service.PlayerPhoneService;
-import com.clemble.casino.server.ExternalController;
+import com.clemble.casino.server.ServerController;
 import com.clemble.casino.server.phone.service.ServerPlayerPhoneService;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
  * Created by mavarazy on 12/8/14.
  */
 @RestController
-public class PlayerPhoneController implements PlayerPhoneService, ExternalController {
+public class PlayerPhoneController implements PlayerPhoneService, ServerController {
 
     final ServerPlayerPhoneService playerPhoneService;
 
