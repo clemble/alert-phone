@@ -47,9 +47,8 @@ public class PendingPlayerPhone implements PlayerAware {
 
         if (!code.equals(that.code)) return false;
         if (!phone.equals(that.phone)) return false;
-        if (!player.equals(that.player)) return false;
+        return player.equals(that.player);
 
-        return true;
     }
 
     @Override

@@ -9,15 +9,15 @@ public interface PhoneCodeGenerator {
 
     String generateCode();
 
-    public static PhoneCodeGenerator noPhoneCodeGenerator() {
+    static PhoneCodeGenerator noPhoneCodeGenerator() {
         return new NoOpPhoneCodeGenerator("123456");
     }
 
-    public static PhoneCodeGenerator randomPhoneCodeGenerator() {
+    static PhoneCodeGenerator randomPhoneCodeGenerator() {
         return new RandomPhoneCodeGenerator();
     }
 
-    public static class NoOpPhoneCodeGenerator implements PhoneCodeGenerator {
+    class NoOpPhoneCodeGenerator implements PhoneCodeGenerator {
 
         final private String code;
 
@@ -32,7 +32,7 @@ public interface PhoneCodeGenerator {
 
     }
 
-    public static class RandomPhoneCodeGenerator implements PhoneCodeGenerator {
+    class RandomPhoneCodeGenerator implements PhoneCodeGenerator {
 
         final Random RANDOM  = new Random();
 

@@ -42,9 +42,8 @@ public class ServerPlayerPhone implements PlayerAware {
         ServerPlayerPhone that = (ServerPlayerPhone) o;
 
         if (!phone.equals(that.phone)) return false;
-        if (!player.equals(that.player)) return false;
+        return player.equals(that.player);
 
-        return true;
     }
 
     @Override
