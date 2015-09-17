@@ -1,7 +1,15 @@
 language: java
+
 jdk:
     - oraclejdk8
 
 services:
-    - mongodb
     - rabbitmq
+    - mongodb
+
+before_script:
+    - mkdir -p shippable/buildoutput
+
+after_script:
+    - cp ./target/alert-phone-*-SNAPSHOT.jar ./shippable/buildoutput/alert-phone.jar
+

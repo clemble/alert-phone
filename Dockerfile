@@ -3,6 +3,6 @@ MAINTAINER antono@clemble.com
 
 EXPOSE 10003
 
-ADD target/alert-phone-*-SNAPSHOT.jar /data/alert-phone.jar
+ADD ./buildoutput/alert-phone.jar /data/alert-phone.jar
 
 CMD java -jar -Dspring.profiles.active=cloud  -Dlogging.config=classpath:logback.cloud.xml -Dserver.port=10003 /data/alert-phone.jar
